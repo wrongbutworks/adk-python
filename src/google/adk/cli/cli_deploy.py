@@ -612,7 +612,7 @@ def _get_service_option_by_adk_version(
 
 def _get_ignore_patterns_func(agent_folder: str):
   """Returns a shutil.ignore_patterns function with combined patterns from .gitignore, .gcloudignore and .ae_ignore."""
-  patterns = set()
+  patterns = set('.adk/')
 
   for filename in ['.gitignore', '.gcloudignore', '.ae_ignore']:
     filepath = os.path.join(agent_folder, filename)
